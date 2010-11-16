@@ -24,12 +24,14 @@ jQuery.fn.random = function(options) {
 
 	numberOfElements = elements.size();
 
-	if (settings.howManyElementsToReturn >= numberOfElements || settings.howManyElementsToReturn == 'all') settings.howManyElementsToReturn = numberOfElements;
+	if (settings.howManyElementsToReturn >= numberOfElements || settings.howManyElementsToReturn == 'all') {
+            settings.howManyElementsToReturn = numberOfElements;
+	}
 
 	while(settings.howManyElementsToReturn > 0 && numberOfElements > 0) {
 		var rand = Math.round( Math.random() * (numberOfElements-1));
-			
-		elementsToReturn = elementsToReturn.add(elements.eq(rand).clone(true));
+		
+		elementsToReturn = elementsToReturn.add(elements.eq(rand));
 		elements = elements.not(':eq('+rand+')');
 	
 		numberOfElements = elements.size();
