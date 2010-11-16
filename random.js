@@ -1,3 +1,4 @@
+// By Olivier “Lespacedunmatin” G., under GPL 3+ licence, WTFPL, or Beer Copyright.
 jQuery.fn.random = function(options) {
 	var elements = this;
 	var numberOfElements;
@@ -16,6 +17,7 @@ jQuery.fn.random = function(options) {
 
 	if (settings.howManyElementsToReturn != 'all') {
 		settings.howManyElementsToReturn = parseInt(settings.howManyElementsToReturn);
+		// FIXME : if options == NaN or 0, settings.howManyElementsToReturn == 'all'. The next line is useless.
 		if (isNaN(settings.howManyElementsToReturn) || settings.howManyElementsToReturn < 1) return null;
 	}
 
