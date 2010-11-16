@@ -1,4 +1,5 @@
 // By Olivier “Lespacedunmatin” G., under GPL 3+ licence, WTFPL, or Beer Copyright.
+// Example : $('li').random().show(); $('li').random(4).show(); $('li').random({howManyElementsToReturn: 'all'}).show();
 jQuery.fn.random = function(options) {
 	var elements = this;
 	var numberOfElements;
